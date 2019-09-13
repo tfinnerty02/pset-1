@@ -33,7 +33,7 @@ public class ProblemSet1 {
   double lengthInMm = length * mmPerInch;
   double widthInMm = width * mmPerInch;
   double areaInMm = lengthInMm * widthInMm;
-  System.out.format("%,.2f\n", areaInMm);
+  System.out.format("\n%,.2f\n", areaInMm);
   // adding the \n adds a line after the .format print
   // adding the comma before the "." in the %,.2f adds the commas in printing
 
@@ -43,7 +43,11 @@ public class ProblemSet1 {
    * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
    */
 
-
+   double cmPerInch = 2.54;
+   double lengthInCm = length * cmPerInch;
+   double widthInCm = width * cmPerInch;
+   double perimeterInCm = (2 * lengthInCm) + (2 * widthInCm);
+   System.out.format("\n%,.2f\n", perimeterInCm);
 
   /*
    * Exercise 3.
