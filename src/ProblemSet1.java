@@ -19,115 +19,125 @@
 
 public class ProblemSet1 {
 
- public static void main(String[] args) {
+    public static void main(String[] args) {
 
-  /*
-   * Exercise 1.
-   *
-   * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
-   */
+        /*
+         * Exercise 1.
+         *
+         * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
+         */
 
-  int length = 11;
-  double width = 8.5;
-  double mmPerInch = 25.4;
-  double lengthInMm = length * mmPerInch;
-  double widthInMm = width * mmPerInch;
-  double areaInMm = lengthInMm * widthInMm;
-  System.out.printf("\n%,.2f millimeters.\n", areaInMm);
-  // adding the \n adds a line after the .format print
-  // adding the comma before the "." in the %,.2f adds the commas in printing
+        int length = 11;
+        double width = 8.5;
+        double mmPerInch = 25.4;
+        double lengthInMm = length * mmPerInch;
+        double widthInMm = width * mmPerInch;
+        double areaInMm = lengthInMm * widthInMm;
+        System.out.printf("\n%,.2f square millimeters.\n", areaInMm);
+        // adding the \n adds a line after the .format print
+        // adding the comma before the "." in the %,.2f adds the commas in printing
 
-  /*
-   * Exercise 2.
-   *
-   * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
-   */
+        /*
+         * Exercise 2.
+         *
+         * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
+         */
 
-   double cmPerInch = 2.54;
-   double lengthInCm = length * cmPerInch;
-   double widthInCm = width * cmPerInch;
-   double perimeterInCm = (2 * lengthInCm) + (2 * widthInCm);
-   System.out.printf("\n%,.2f centimeters.\n", perimeterInCm);
+        double cmPerInch = 2.54;
+        double lengthInCm = length * cmPerInch;
+        double widthInCm = width * cmPerInch;
+        double perimeterInCm = (2 * lengthInCm) + (2 * widthInCm);
+        System.out.printf("\n%,.2f square centimeters.\n", perimeterInCm);
 
-  /*
-   * Exercise 3.
-   *
-   * What is the length of the diagonal (in inches) between two corners on an 8.5-
-   * by-11-inch sheet of paper?
-   */
+        /*
+         * Exercise 3.
+         *
+         * What is the length of the diagonal (in inches) between two corners on an 8.5-
+         * by-11-inch sheet of paper?
+         */
 
-   double aSquaredBSquared = Math.pow(length, 2) + Math.pow(width, 2);
-   double diagonal = Math.pow(aSquaredBSquared, 0.5);
-   System.out.printf("\n%,.2f inches.\n", diagonal);
+        double aSquaredBSquared = Math.pow(length, 2) + Math.pow(width, 2);
+        double diagonal = Math.pow(aSquaredBSquared, 0.5);
+        System.out.printf("\n%,.2f inches.\n", diagonal);
 
-  /*
-   * Exercise 4.
-   *
-   * Given the grading policy and the homework, quiz, and test grades I received,
-   * what marking period grade will I get?
-   */
+        /*
+         * Exercise 4.
+         *
+         * Given the grading policy and the homework, quiz, and test grades I received,
+         * what marking period grade will I get?
+         */
 
-  int homework1 = 88;
-  int homework2 = 91;
-  int homework3 = 0;
-  int quiz1 = 84;
-  int quiz2 = 89;
-  int quiz3 = 93;
-  int test1 = 74;
-  int test2 = 87;
-  int test3 = 82;
+        int homework1 = 88;
+        int homework2 = 91;
+        int homework3 = 0;
+        int quiz1 = 84;
+        int quiz2 = 89;
+        int quiz3 = 93;
+        int test1 = 74;
+        int test2 = 87;
+        int test3 = 82;
 
+        double homeworkWeight = 0.15;
+        double quizWeight = 0.35;
+        double testWeight = 0.5;
 
+        double homeworkGrade = (homework1*homeworkWeight + homework2*homeworkWeight + homework3*homeworkWeight)/3;
+        double quizGrade = (quiz1*quizWeight + quiz2*quizWeight + quiz3*quizWeight)/3;
+        double testGrade = (test1*testWeight + test2*testWeight + test3*testWeight)/3;
 
-  /*
-   * Exercise 5.
-   *
-   * I make $12.50/hour working as a cashier at a local supermarket. How much money
-   * will I make this week?
-   */
+        double finalGrade = homeworkGrade + quizGrade + testGrade;
 
+         System.out.printf("\n%,.2f%%\n", finalGrade);
 
-
-  /*
-   * Exercise 6.
-   *
-   * What is my take-home pay each check?
-   */
-
-
-
-  /*
-   * Exercise 7.
-   *
-   * I am planning a class trip next month. How many buses do I need, and how many
-   * people will be on the last bus?
-   */
+        /*
+         * Exercise 5.
+         *
+         * I make $12.50/hour working as a cashier at a local supermarket. How much money
+         * will I make this week?
+         */
 
 
 
-  /*
-   * Exercise 8.
-   *
-   * What is the surface area of a standard Cornhole board?
-   */
+        /*
+         * Exercise 6.
+         *
+         * What is my take-home pay each check?
+         */
 
 
 
-  /*
-   * Exercise 9.
-   *
-   * Are the years 2020, 2100, and 2400 leap years?
-   */
+        /*
+         * Exercise 7.
+         *
+         * I am planning a class trip next month. How many buses do I need, and how many
+         * people will be on the last bus?
+         */
 
 
 
-  /*
-   * Exercise 10.
-   *
-   * What is the wind chill?
-   */
+        /*
+         * Exercise 8.
+         *
+         * What is the surface area of a standard Cornhole board?
+         */
 
 
 
- }
+        /*
+         * Exercise 9.
+         *
+         * Are the years 2020, 2100, and 2400 leap years?
+         */
+
+
+
+        /*
+         * Exercise 10.
+         *
+         * What is the wind chill?
+         */
+
+
+
+    }
 }
