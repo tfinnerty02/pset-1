@@ -33,7 +33,7 @@ public class ProblemSet1 {
   double lengthInMm = length * mmPerInch;
   double widthInMm = width * mmPerInch;
   double areaInMm = lengthInMm * widthInMm;
-  System.out.format("\n%,.2f\n", areaInMm);
+  System.out.printf("\n%,.2f millimeters.\n", areaInMm);
   // adding the \n adds a line after the .format print
   // adding the comma before the "." in the %,.2f adds the commas in printing
 
@@ -47,7 +47,7 @@ public class ProblemSet1 {
    double lengthInCm = length * cmPerInch;
    double widthInCm = width * cmPerInch;
    double perimeterInCm = (2 * lengthInCm) + (2 * widthInCm);
-   System.out.format("\n%,.2f\n", perimeterInCm);
+   System.out.printf("\n%,.2f centimeters.\n", perimeterInCm);
 
   /*
    * Exercise 3.
@@ -56,7 +56,9 @@ public class ProblemSet1 {
    * by-11-inch sheet of paper?
    */
 
-
+   double aSquaredBSquared = Math.pow(length, 2) + Math.pow(width, 2);
+   double diagonal = Math.pow(aSquaredBSquared, 0.5);
+   System.out.printf("\n%,.2f inches.\n", diagonal);
 
   /*
    * Exercise 4.
