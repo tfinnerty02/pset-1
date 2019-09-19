@@ -81,13 +81,13 @@ public class ProblemSet1 {
         double quizWeight = 0.35;
         double testWeight = 0.5;
 
-        double homeworkGrade = (homework1*homeworkWeight + homework2*homeworkWeight + homework3*homeworkWeight)/3;
-        double quizGrade = (quiz1*quizWeight + quiz2*quizWeight + quiz3*quizWeight)/3;
-        double testGrade = (test1*testWeight + test2*testWeight + test3*testWeight)/3;
+        double homeworkGrade = (homework1 * homeworkWeight + homework2 * homeworkWeight + homework3 * homeworkWeight) / 3;
+        double quizGrade = (quiz1 * quizWeight + quiz2 * quizWeight + quiz3 * quizWeight) / 3;
+        double testGrade = (test1 * testWeight + test2 * testWeight + test3 * testWeight) / 3;
 
         double finalGrade = homeworkGrade + quizGrade + testGrade;
 
-         System.out.printf("\n%,.2f%%\n", finalGrade);
+        System.out.printf("\n%,.2f%%\n", finalGrade);
 
         /*
          * Exercise 5.
@@ -96,7 +96,10 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
-
+         double hourlyWage = 12.5;
+         double sumOfHours = 7.5 + 8 + 10.5 + 9.5 + 6 + 11.5;
+         double paycheck = sumOfHours * hourlyWage;
+         System.out.printf("\n$%,.2f\n", paycheck);
 
         /*
          * Exercise 6.
@@ -104,7 +107,14 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-
+         int salary1 = 117000;
+         double retirementContribution = 0.07;
+         double salary2 = salary1 - salary1*retirementContribution;
+         double fedTaxRate = 0.24;
+         double salary3 = salary2 - salary2*fedTaxRate;
+         double stateTaxRate = 0.0637;
+         double salary4 = salary3 - salary3*stateTaxRate;
+         System.out.printf("\n$%,.2f\n", salary4/24);
 
         /*
          * Exercise 7.
@@ -113,7 +123,12 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
-
+         int students = 273;
+         int teachers = 28;
+         int capacity = 54;
+         int fullBuses = (students+teachers)/capacity;
+         int extraStudents = (students+teachers)%capacity;
+         System.out.println(fullBuses+1 + " buses are needed, with " + extraStudents + " passengers on the last bus.");
 
         /*
          * Exercise 8.
