@@ -126,9 +126,9 @@ public class ProblemSet1 {
          int students = 273;
          int teachers = 28;
          int capacity = 54;
-         int fullBuses = (students+teachers)/capacity;
+         int totalBuses = (students+teachers)/capacity + 1;
          int extraStudents = (students+teachers)%capacity;
-         System.out.println(fullBuses+1 + " buses are needed, with " + extraStudents + " passengers on the last bus.");
+         System.out.println("\n" + totalBuses + " buses are needed, with " + extraStudents + " passengers on the last bus.");
 
         /*
          * Exercise 8.
@@ -136,7 +136,11 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-
+        int boardLength = 48;
+        int boardWidth = 24;
+        int diameter = 6;
+        double surfaceArea = boardLength*boardWidth - Math.PI*Math.pow(diameter/2, 2);
+        System.out.printf("\n%,.2f square inches.\n", surfaceArea);
 
         /*
          * Exercise 9.
@@ -144,7 +148,13 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
-
+        int year2020 = 2020;
+        int year2100 = 2100;
+        int year2400 = 2400;
+        boolean leap2020 = (2020%4 == 0 && 2020%100 != 0) || (2020%400 == 0);
+        boolean leap2100 = (2100%4 == 0 && 2100%100 != 0) || (2100%400 == 0);
+        boolean leap2400 = (2400%4 == 0 && 2400%100 != 0) || (2400%400 == 0);
+        System.out.println("\n2020 is a leap year..." + leap2020 + ".\n2100 is a leap year..." + leap2100 + ".\n2400 is a leap year..." + leap2400 +".\n");
 
         /*
          * Exercise 10.
@@ -152,7 +162,11 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
-
+         int temperature = 38;
+         int winds = 14;
+         //35.74 + 0.6215t + (0.4275t - 35.75)v0.16
+         // System.out.println(35.74 + 0.6215*temperature + (0.4275*temperature - 35.75)*Math.pow(winds, 0.16));
+         System.out.printf("%,.1f degrees\n\n", 35.74 + 0.6215*temperature + (0.4275*temperature - 35.75)*Math.pow(winds, 0.16));
 
     }
 }
